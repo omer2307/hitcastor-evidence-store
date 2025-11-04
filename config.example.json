@@ -1,0 +1,14 @@
+{
+  "s3": {
+    "endpoint": "https://s3.amazonaws.com",
+    "region": "us-east-1",
+    "accessKeyId": "your-access-key-id",
+    "secretAccessKey": "your-secret-access-key",
+    "bucket": "your-evidence-bucket",
+    "objectLockEnabled": true
+  },
+  "ipfs": {
+    "endpoint": "http://localhost:5001",
+    "timeout": 30000
+  }
+}
