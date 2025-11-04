@@ -1,0 +1,55 @@
+{
+  "name": "hitcastor-evidence-store",
+  "version": "1.0.0",
+  "description": "Evidence store library for Hitcastor prediction markets with S3/R2 and IPFS support",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "bin": {
+    "hitcastor-evidence": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:coverage": "vitest --coverage",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build",
+    "cli": "node ./dist/cli.js"
+  },
+  "keywords": [
+    "hitcastor",
+    "evidence",
+    "storage",
+    "s3",
+    "r2",
+    "ipfs",
+    "blockchain",
+    "prediction-markets"
+  ],
+  "author": "Hitcastor",
+  "license": "MIT",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.465.0",
+    "@aws-sdk/s3-request-presigner": "^3.465.0",
+    "ipfs-http-client": "^60.0.1",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "@types/yargs": "^17.0.32",
+    "typescript": "^5.3.3",
+    "vitest": "^1.1.0",
+    "@vitest/coverage-v8": "^1.1.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
