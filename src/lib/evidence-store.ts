@@ -36,7 +36,7 @@ export class EvidenceStore {
     }
 
     for (const [index, settlement] of results.entries()) {
-      if (settlement.status === 'fulfilled') {
+      if (settlement.status === 'fulfilled' && settlement.value) {
         const storeResult = settlement.value
         if (index === 0 && this.s3Store) {
           result.s3Key = storeResult.s3Key
